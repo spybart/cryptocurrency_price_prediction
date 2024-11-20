@@ -16,17 +16,17 @@ Can cryptocurrency prices be predicted using machine learning?
 The CryptoCompare API provides historical price data for cryptocurrencies. The data can be retrieved as daily, hourly, or minutely data.
 
 #### Methodology
-Because this is a time series problem, I will use the ARIMA model on historical price data to forecast future prices. Specifically, I will use the auto-ARIMA model, which automatically finds the optimal parameters for an ARIMA model based on the training data.
+Because this is a time series problem, I will use the ARIMA model. Specifically, I will use the auto-ARIMA model, which automatically finds the optimal parameters for an ARIMA model based on the training data.
 
 #### Results
-Because there is no seasonality in the historical price data, it is inaccurate to predict future prices using the ARIMA model. When comparing the actual vs predicted data, we can observe that the predictions seem to be 1 step behind the actual data. This is due to the fact that the model is making a prediction based on the trend of the historical data, which is not a guaranteed indicator of the direction the data will go.
+Because there is no seasonality in the historical price data, it is inaccurate to predict prices using the ARIMA model. When comparing the actual and predicted data, we can observe that the predictions seem to be 1 step behind the actual data. This is due to the fact that the model is making a prediction based on the trend of the historical data, which is not a guaranteed indicator of the direction the data will go.
 
-Based on the current results, this price prediction is not necessarily a reliable way to predict prices, as it shows a delay during forecasting.
+Based on the current results, the ARIMA model is not a reliable way to predict prices, as it shows a delay during forecasting.
 
 #### Next Steps
-Currently the ARIMA model is only trained on 1 feature; the price of the cryptocurrency. Perhaps by training the model on more features, it can forecast more accurately. One way to achieve this is to use the other features that are provided by the CryptoCompare API, which are the `high`, `low`, `open`, `volumefrom`, `volumeto`	fields. Another way would be to generate technical indicators by calculating them off the historical data before the training step.
+Using a technique known as window sliding, we can frame the task into a supervised learning problem. By doing so, we can utilize the suite of standard linear and nonlinear machine learning algorithms on this problem.
 
-Exploring other types of time series models can potentially yield better results as well.
+Another option would be to explore recurrent neural networks, which seems to a modern solution to time series tasks.
 
 #### Jupyter Notebook:
 
