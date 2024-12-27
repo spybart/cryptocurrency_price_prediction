@@ -39,6 +39,7 @@ We will then evalute the results using MAPE (mean average percentage error) as o
 
 #### Results
 
+```
       Model  Train Size  Predictions      MAPE  Run Time (s)
 0      Base          30           90  0.018602           0.1
 1     ARIMA          30           90  0.019380           1.2
@@ -52,6 +53,7 @@ We will then evalute the results using MAPE (mean average percentage error) as o
 9      Base         120           90  0.018602           0.1
 10    ARIMA         120           90  0.018671           1.0
 11  XGBoost         120           90  0.018603           6.7
+```
 
 Because there is no seasonality in the historical price data, it is inaccurate to predict prices using the ARIMA model. When comparing the actual and predicted data, we can observe that the predictions seem to be 1 step behind the actual data. This is due to the fact that the model is making a prediction based on the trend of the historical data, which is not a guaranteed indicator of the direction the data will go.
 
