@@ -39,20 +39,24 @@ We will then evalute the results using MAPE (mean average percentage error) as o
 
 #### Results
 
+Below we will compare the performance of the models based on different levels of train size.
+
+First, let's see how our base model performed. We will use this evaluation as a baseline for our other models.
 ```
       Model  Train Size  Predictions      MAPE  Run Time (s)
-0      Base          30           90  0.018602           0.1
-1     ARIMA          30           90  0.019380           1.2
-2   XGBoost          30           90  0.018602           4.1
-3      Base          60           90  0.018602           0.1
-4     ARIMA          60           90  0.018820           0.9
-5   XGBoost          60           90  0.018602           2.5
-6      Base          90           90  0.018602           0.1
-7     ARIMA          90           90  0.018815           1.0
-8   XGBoost          90           90  0.018601           2.6
-9      Base         120           90  0.018602           0.1
-10    ARIMA         120           90  0.018671           1.0
-11  XGBoost         120           90  0.018603           6.7
+0      Base           1           90  0.018602           0.1
+```
+Now, let's see how our ML models performend with different levels of train size.
+```
+     Model  Train Size  Predictions      MAPE  Run Time (s)
+0    ARIMA          30           90  0.019380           0.9
+1    ARIMA          60           90  0.018820           0.9
+2    ARIMA          90           90  0.018815           0.9
+3    ARIMA         120           90  0.018671           0.9
+4  XGBoost          30           90  0.018602           2.3
+5  XGBoost          60           90  0.018602           5.9
+6  XGBoost          90           90  0.018601           3.8
+7  XGBoost         120           90  0.018603           2.8
 ```
 
 Because there is no seasonality in the historical price data, it is inaccurate to predict prices using the ARIMA model. When comparing the actual and predicted data, we can observe that the predictions seem to be 1 step behind the actual data. This is due to the fact that the model is making a prediction based on the trend of the historical data, which is not a guaranteed indicator of the direction the data will go.
