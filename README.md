@@ -14,7 +14,8 @@ Can cryptocurrency prices be predicted using machine learning?
 
 #### Data Sources
 The CryptoCompare.com API provides historical price data for cryptocurrencies.
-The data can be retrieved as daily, hourly, or minutely data.
+The data can be retrieved as daily, hourly, or minutely data. In this project, we will be using daily data.
+Below is a sample of daily bitcoin price data:
 ```
 	time    	high    	low     	open    	volumefrom	volumeto    	close   	conversionType
 0	1610755200	37942.44	35395.88	36790.17	54226.28	1.995054e+09	36025.26	direct	
@@ -23,6 +24,7 @@ The data can be retrieved as daily, hourly, or minutely data.
 3	1611014400	37867.53	35917.28	36623.04	48457.45	1.787957e+09	35932.79	direct	
 4	1611100800	36409.96	33519.59	35932.79	66302.02	2.316776e+09	35501.38	direct	
 ```
+While there are multiple columns in this dataset that can potentially be helpful to us, our goal will be to predict the close price.
 
 #### Methodology
 In this project we will train models based on past (historical) price data to forecast future data.
