@@ -4,19 +4,25 @@
 **by Murat Tulca**
 
 #### Executive summary
-This project aims to predict cryptocurrency prices using machine learning. By building models that are trained on historical data, future data will be predicted.
+This project aims to predict cryptocurrency prices using machine learning. We will explore different ML models and evaluate their performance.
 
 #### Rationale
-Cryptocurrency prices are generally on the rise but are also very volatile. A reasonably accurate price prediction model can help cryptocurrency traders make profits by knowing when to buy and sell.
+Cryptocurrency prices are generally on the rise but are also very volatile. A reasonably accurate price prediction model can help cryptocurrency traders by anticipating changes in prices and set up their trades accordingly.
 
 #### Research Question
 Can cryptocurrency prices be predicted using machine learning?
 
 #### Data Sources
-The CryptoCompare API provides historical price data for cryptocurrencies. The data can be retrieved as daily, hourly, or minutely data.
+The CryptoCompare.com API provides historical price data for cryptocurrencies. The data can be retrieved as daily, hourly, or minutely data.
 
 #### Methodology
-Because this is a time series problem, I will use the ARIMA model. Specifically, I will use the auto-ARIMA model, which automatically finds the optimal parameters for an ARIMA model based on the training data.
+In this project we will train models based on past (historical) price data to forecast future data.
+As this is a time series problem, we will explore the following ML models:
+- ARIMA (Autoregressive integrated moving average)
+- XGBoost (eXtreme Gradient Boosting)
+- LSTM (Long short-term memory)
+We will also create a base model that predicts the future price as the exact same value as the price of the previous day. Our goal is to beat the performance of this base model with the ML models above.
+In each instance, we will try to predict the close price of bitcoin (or other cryptocurrency) for the past 90 days, where each prediction is based on a model that is trained on the previous 60 days of close prices. We will then evalute the results using MAPE (mean average percentage error) as our metric.
 
 #### Results
 Because there is no seasonality in the historical price data, it is inaccurate to predict prices using the ARIMA model. When comparing the actual and predicted data, we can observe that the predictions seem to be 1 step behind the actual data. This is due to the fact that the model is making a prediction based on the trend of the historical data, which is not a guaranteed indicator of the direction the data will go.
