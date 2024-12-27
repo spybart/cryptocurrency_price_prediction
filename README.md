@@ -38,10 +38,9 @@ In each instance, we will try to predict the close price of bitcoin (or other cr
 We will then evalute the results using MAPE (mean average percentage error) as our metric.
 
 #### Results
+Below, we will see how our models performed to predict the daily price of bitcon.
 
-Below we will compare the performance of the models based on different levels of train size.
-
-First, let's see how our base model performed. We will use this evaluation as a baseline for our other models.
+First, let's see how our base model performed.
 ```
       Model  Train Size  Predictions      MAPE  Run Time (s)
 0      Base           1           90  0.018602           0.1
@@ -58,7 +57,6 @@ Now, let's see how our ML models performend with different levels of train size.
 6  XGBoost          90           90  0.018601           3.8
 7  XGBoost         120           90  0.018603           2.8
 ```
-
 Because there is no seasonality in the historical price data, it is inaccurate to predict prices using the ARIMA model. When comparing the actual and predicted data, we can observe that the predictions seem to be 1 step behind the actual data. This is due to the fact that the model is making a prediction based on the trend of the historical data, which is not a guaranteed indicator of the direction the data will go.
 
 Based on the current results, the ARIMA model is not a reliable way to predict prices, as it shows a delay during forecasting.
