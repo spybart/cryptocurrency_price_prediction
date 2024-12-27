@@ -3,16 +3,14 @@
 
 **by Murat Tulca**
 
-#### Executive summary
+#### Summary
 This project aims to predict cryptocurrency prices using machine learning. We will explore different ML models and evaluate their performance.
 
-#### Rationale
-Cryptocurrency prices are generally on the rise but are also very volatile. A reasonably accurate price prediction model can help cryptocurrency traders by anticipating changes in prices and set up their trades accordingly.
+A reasonably accurate price prediction model can help cryptocurrency traders by anticipating changes in prices and set up their trades accordingly.
 
-#### Research Question
 Can cryptocurrency prices be predicted using machine learning?
 
-#### Data Sources
+#### Data Source
 The CryptoCompare.com API provides historical price data for cryptocurrencies.
 The data can be retrieved as daily, hourly, or minutely data. In this project, we will be using daily data.
 
