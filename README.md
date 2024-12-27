@@ -21,8 +21,11 @@ As this is a time series problem, we will explore the following ML models:
 - ARIMA (Autoregressive integrated moving average)
 - XGBoost (eXtreme Gradient Boosting)
 - LSTM (Long short-term memory)
-We will also create a base model that predicts the future price as the exact same value as the price of the previous day. Our goal is to beat the performance of this base model with the ML models above.
-In each instance, we will try to predict the close price of bitcoin (or other cryptocurrency) for the past 90 days, where each prediction is based on a model that is trained on the previous 60 days of close prices. We will then evalute the results using MAPE (mean average percentage error) as our metric.
+
+We will also create a base model that predicts the future price as the exact same value as the price of the previous day.
+Our goal is to beat the performance of this base model with the ML models above.
+In each instance, we will try to predict the close price of bitcoin (or other cryptocurrency) for the past 90 days, where each prediction is based on a model that is trained on the previous 60 days of close prices.
+We will then evalute the results using MAPE (mean average percentage error) as our metric.
 
 #### Results
 Because there is no seasonality in the historical price data, it is inaccurate to predict prices using the ARIMA model. When comparing the actual and predicted data, we can observe that the predictions seem to be 1 step behind the actual data. This is due to the fact that the model is making a prediction based on the trend of the historical data, which is not a guaranteed indicator of the direction the data will go.
