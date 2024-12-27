@@ -14,6 +14,14 @@ Can cryptocurrency prices be predicted using machine learning?
 
 #### Data Sources
 The CryptoCompare.com API provides historical price data for cryptocurrencies. The data can be retrieved as daily, hourly, or minutely data.
+```
+	time	high	low	open	volumefrom	volumeto	close	conversionType	conversionSymbol
+0	1610755200	37942.44	35395.88	36790.17	54226.28	1.995054e+09	36025.26	direct	
+1	1610841600	36860.67	33854.83	36025.26	50913.30	1.806688e+09	35839.51	direct	
+2	1610928000	37429.24	34784.40	35839.51	43063.97	1.554687e+09	36623.04	direct	
+3	1611014400	37867.53	35917.28	36623.04	48457.45	1.787957e+09	35932.79	direct	
+4	1611100800	36409.96	33519.59	35932.79	66302.02	2.316776e+09	35501.38	direct	
+```
 
 #### Methodology
 In this project we will train models based on past (historical) price data to forecast future data.
