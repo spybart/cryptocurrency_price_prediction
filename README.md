@@ -38,14 +38,14 @@ In each instance, we will try to predict the close price of bitcoin (or other cr
 We will then evalute the results using MAPE (mean average percentage error) as our metric.
 
 #### Results
-Below, we will see how our models performed to predict the daily price of bitcon.
+Below, we will see how our models performed to predict the daily price of bitcoin.
 
 First, let's see how our base model performed.
 ```
       Model  Train Size  Predictions      MAPE  Run Time (s)
 0      Base           1           90  0.018602           0.1
 ```
-Now, let's see how our ML models performend with different levels of train size.
+Now, let's see how our ML models performend using just the close price as an input feature, with different levels of train size.
 ```
      Model  Train Size  Predictions      MAPE  Run Time (s)
 0    ARIMA          30           90  0.019380           0.9
