@@ -32,12 +32,27 @@ As this is a time series problem, we will explore the following ML models:
 - XGBoost (eXtreme Gradient Boosting)
 - LSTM (Long short-term memory)
 
-We will also create a base model that predicts the future price as the exact same value as the price of the previous day.
+We will also create a base model that predicts the future price as the exact same value as the previous day close price.
 Our goal is to beat the performance of this base model with the ML models above.
 In each instance, we will try to predict the close price of bitcoin (or other cryptocurrency) for the past 90 days, where each prediction is based on a model that is trained on the previous 60 days of close prices.
 We will then evalute the results using MAPE (mean average percentage error) as our metric.
 
 #### Results
+
+      Model  Train Size  Predictions      MAPE  Run Time (s)
+0      Base          30           90  0.018602           0.1
+1     ARIMA          30           90  0.019380           1.2
+2   XGBoost          30           90  0.018602           4.1
+3      Base          60           90  0.018602           0.1
+4     ARIMA          60           90  0.018820           0.9
+5   XGBoost          60           90  0.018602           2.5
+6      Base          90           90  0.018602           0.1
+7     ARIMA          90           90  0.018815           1.0
+8   XGBoost          90           90  0.018601           2.6
+9      Base         120           90  0.018602           0.1
+10    ARIMA         120           90  0.018671           1.0
+11  XGBoost         120           90  0.018603           6.7
+
 Because there is no seasonality in the historical price data, it is inaccurate to predict prices using the ARIMA model. When comparing the actual and predicted data, we can observe that the predictions seem to be 1 step behind the actual data. This is due to the fact that the model is making a prediction based on the trend of the historical data, which is not a guaranteed indicator of the direction the data will go.
 
 Based on the current results, the ARIMA model is not a reliable way to predict prices, as it shows a delay during forecasting.
