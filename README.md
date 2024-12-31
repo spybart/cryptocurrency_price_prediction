@@ -4,17 +4,15 @@
 **by Murat Tulca**
 
 #### Summary
-This project aims to predict cryptocurrency prices using machine learning. We will explore different ML models and evaluate their performance.
-
-A reasonably accurate price prediction model can help cryptocurrency traders by anticipating changes in prices and set up their trades accordingly.
-
-Can cryptocurrency prices be predicted using machine learning?
+This project aims to predict cryptocurrency prices using machine learning. We will explore different ML models and evaluate their performance.<br>
+A reasonably accurate price prediction model can help cryptocurrency traders by anticipating changes in prices and set up their trades accordingly.<br>
+Let's find out if cryptocurrency prices be predicted using machine learning.
 
 #### Data Source
 The CryptoCompare.com API provides historical price data for cryptocurrencies.
 The data can be retrieved as daily, hourly, or minutely data. In this project, we will be using daily data.
 
-Below is a sample of daily bitcoin price data retrieved using the CryptoCompare.com API:
+Below is a sample of bitcoin historical data retrieved using the [CryptoCompare API](https://min-api.cryptocompare.com):
 ```
 	time    	high    	low     	open    	volumefrom	volumeto    	close   	conversionType
 0	1610755200	37942.44	35395.88	36790.17	54226.28	1.995054e+09	36025.26	direct	
@@ -38,7 +36,7 @@ In each instance, we will try to predict the `close` price of bitcoin (or other 
 We will then evalute the results using MAPE (mean average percentage error) as our metric.
 
 #### Results
-The table below shows the best performing model of each type.
+The table below shows the best performing model of each type for predicting the `close` price of bitcoin.
 ```
               Model  Train Size  Predictions      MAPE  Run Time (s)  Window Size  Features
 0              Base           1           30  0.017564           0.0          NaN       NaN
