@@ -4,8 +4,8 @@
 **by Murat Tulca**
 
 #### Summary
-This project aims to predict cryptocurrency prices using machine learning. We will explore different ML models and evaluate their performance.<br>
-A reasonably accurate price prediction model can help cryptocurrency traders by anticipating changes in prices and set up their trades accordingly.<br>
+This project aims to predict cryptocurrency prices using machine learning (ML). We will explore different ML models and evaluate their performance.
+A reasonably accurate price prediction model can help cryptocurrency traders by anticipating changes in prices and set up their trades accordingly.
 Let's find out if cryptocurrency prices be predicted using machine learning.
 
 #### Data Source
