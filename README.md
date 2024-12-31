@@ -4,7 +4,7 @@
 **by Murat Tulca**
 
 #### Summary
-This project aims to predict cryptocurrency prices using machine learning (ML). We will explore different ML models and evaluate their performance.
+This project aims to predict cryptocurrency prices using machine learning (ML). We will try different ML models and evaluate their performance.
 A reasonably accurate price prediction model can help cryptocurrency traders by anticipating changes in prices and set up their trades accordingly.
 Let's find out if cryptocurrency prices be predicted using machine learning.
 
@@ -24,7 +24,7 @@ Below is a sample of bitcoin historical data retrieved using the [CryptoCompare 
 While there are multiple columns in this dataset that can potentially be helpful to us, our goal will be to predict the `close` price.
 
 #### Methodology
-In this project we will train models based on past (historical) price data to forecast future data.
+We will train models based on past (historical) price data to forecast future data.
 We will explore the following ML models:
 - ARIMA (Autoregressive integrated moving average)
 - Linear Regression
@@ -45,7 +45,7 @@ The table below shows the best performing model of each type for predicting the 
 3              LSTM         300           30  0.028890         301.0         60.0       1.0
 ```
 #### Summary
-We can see that the only model that managed to beat our Base model is Linear Regression, but by an extremely small amount. This suggests that using ML to make predictions on cryptocurrency prices using only the historical data as input does not yield better results than simply using the price of the previous day as the next day prediction.
+We can see that the only model that managed to beat our Base model is Linear Regression, though by an extremely small amount. This suggests that using ML to make predictions on cryptocurrency prices using only the historical price data as input does not yield better results than simply using the price of the previous day as the prediction.
 
 #### Next Steps
 A possible next step would be to use technical indicators as input features. Technical features are often used when making predictions in the real world. Another option would be to try to improve the LSTM model by using more layers and increasing training time. However, this is a computationally expensive approach.
