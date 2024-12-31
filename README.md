@@ -41,17 +41,16 @@ We will then evalute the results using MAPE (mean average percentage error) as o
 The table below shows the best performing model of each type.
 ```
               Model  Train Size  Predictions      MAPE  Run Time (s)  Window Size  Features
-0              Base           1           30  0.017576           0.0          NaN       NaN
-1             ARIMA         300           30  0.017898           0.6          NaN       NaN
-2  LinearRegression         300            3  0.011910           0.1         60.0       1.0
-3              LSTM         300            3  0.030943          11.4         60.0       1.0
+0              Base           1           30  0.017564           0.0          NaN       NaN
+1             ARIMA         300           30  0.017886           0.5          NaN       NaN
+2  LinearRegression         300           30  0.016671           0.3         60.0       1.0
+3              LSTM         300           30  0.028890         301.0         60.0       1.0
 ```
 #### Summary
-Because there is no seasonality in the historical price data, it is inaccurate to predict prices using the ARIMA model. When comparing the actual and predicted data, we can observe that the predictions seem to be 1 step behind the actual data. This is due to the fact that the model is making a prediction based on the trend of the historical data, which is not a guaranteed indicator of the direction the data will go.
-
-Based on the current results, the ARIMA model is not a reliable way to predict prices, as it shows a delay during forecasting.
+We can see that the only model that managed to beat our Base model is Linear Regression, but by an extremely small amount. This suggests that using ML to make predictions on cryptocurrency prices using only the historical data as input does not yield better results than simply using the price of the previous day as the next day prediction.
 
 #### Next Steps
+A possible next step would be to use technical indicators as input features. Technical features are often used when making predictions in the real world. Another option would be to try to improve the LSTM model by using more layers and increasing training time. However, this is a computationally expensive approach.
 
 #### Jupyter Notebook:
 
