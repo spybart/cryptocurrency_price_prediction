@@ -9,10 +9,10 @@ A reasonably accurate price prediction model can help cryptocurrency traders by 
 Let's find out if cryptocurrency prices can be predicted using machine learning.
 
 #### Data Source
-The CryptoCompare.com API provides historical price data for cryptocurrencies.
+The [CryptoCompare API](https://min-api.cryptocompare.com) provides historical price data for cryptocurrencies.
 The data can be retrieved as daily, hourly, or minutely data. In this project, we will be using daily data.
 
-Below is a sample of bitcoin historical data retrieved using the [CryptoCompare API](https://min-api.cryptocompare.com):
+Below is a sample of bitcoin historical data retrieved from the CryptoCompare API:
 ```
 	time    	high    	low     	open    	volumefrom	volumeto    	close   	conversionType
 0	1610755200	37942.44	35395.88	36790.17	54226.28	1.995054e+09	36025.26	direct	
