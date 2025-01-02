@@ -24,8 +24,8 @@ Below is a sample of bitcoin historical data retrieved from the CryptoCompare AP
 While there are multiple columns in this dataset that can potentially be helpful to us, our goal will be to predict the `close` price.
 
 #### Methodology
-We will train models based on past (historical) price data to forecast future data.
-We will explore the following ML models:
+We will train models based on historical price data to forecast future data.
+We will train the following ML models:
 - ARIMA (Autoregressive integrated moving average)
 - Linear Regression
 - LSTM (Long short-term memory)
@@ -50,6 +50,6 @@ We can see that the only model that managed to beat our Base model is Linear Reg
 #### Next Steps
 A possible next step would be to use technical indicators as input features. Technical features are often used when making predictions in the real world. Another option would be to try to improve the LSTM model by using more layers and increasing training time. However, this is a computationally expensive approach.
 
-#### Jupyter Notebook:
+#### Jupyter Notebook
 
 https://github.com/spybart/cryptocurrency_price_prediction/blob/main/cryptocurrency_price_prediction.ipynb
