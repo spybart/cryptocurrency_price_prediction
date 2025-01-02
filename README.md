@@ -10,7 +10,7 @@ Let's find out if cryptocurrency prices can be predicted using machine learning.
 
 #### Jupyter Notebook
 
-This project is created with Jupyter Notebook, linked [here](https://github.com/spybart/cryptocurrency_price_prediction/blob/main/cryptocurrency_price_prediction.ipynb).<br>
+This project is created with Jupyter Notebook, linked [here](https://github.com/spybart/cryptocurrency_price_prediction/blob/main/cryptocurrency_price_prediction.ipynb).
 The notebook contains all code including data retrieval, model training, and evaluations.
 
 #### Data Source
