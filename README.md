@@ -38,11 +38,11 @@ We will then evalute the results using MAPE (mean average percentage error) as o
 #### Results
 The table below shows the best performing model of each type for predicting the `close` price of bitcoin.
 ```
-              Model  Train Size  Predictions      MAPE  Run Time (s)  Window Size  Features
-0              Base           1           30  0.017564           0.0          NaN       NaN
-1             ARIMA         300           30  0.017886           0.5          NaN       NaN
-2  LinearRegression         300           30  0.016671           0.3         60.0       1.0
-3              LSTM         300           30  0.028890         301.0         60.0       1.0
+              Model  Train Size  Features  Predictions      MAPE  Run Time (s)  Window Size
+0              Base           1         1           30  0.017782           0.0          NaN
+1             ARIMA         300         1           30  0.017946           0.5          NaN
+2  LinearRegression         300         1           30  0.017025           0.3         60.0
+3              LSTM         300         5           30  0.023593         496.0         60.0
 ```
 #### Summary
 We can see that the only model that managed to beat our Base model is Linear Regression, though by an extremely small amount. This suggests that using ML to make predictions on cryptocurrency prices using only the historical price data as input does not yield better results than simply using the price of the previous day as the prediction.
