@@ -8,6 +8,11 @@ This project aims to predict cryptocurrency prices using machine learning (ML). 
 A reasonably accurate price prediction model can help cryptocurrency traders by anticipating changes in prices and set up their trades accordingly.
 Let's find out if cryptocurrency prices can be predicted using machine learning.
 
+#### Jupyter Notebook
+
+This project is created with Jupyter Notebook, linked [here](https://github.com/spybart/cryptocurrency_price_prediction/blob/main/cryptocurrency_price_prediction.ipynb).<br>
+The notebook contains all code including data retrieval, model training, and evaluations.
+
 #### Data Source
 The [CryptoCompare API](https://min-api.cryptocompare.com) provides historical price data for cryptocurrencies.
 The data can be retrieved as daily, hourly, or minutely data. In this project, we will be using daily data.
@@ -49,7 +54,3 @@ We can see that the only model that managed to beat our Base model is Linear Reg
 
 #### Next Steps
 A possible next step would be to use technical indicators as input features. Technical features are often used when making predictions in the real world. Another option would be to try to improve the LSTM model by using more layers and increasing training time. However, this is a computationally expensive approach.
-
-#### Jupyter Notebook
-
-https://github.com/spybart/cryptocurrency_price_prediction/blob/main/cryptocurrency_price_prediction.ipynb
